@@ -1,5 +1,4 @@
 {
-  // Cloudflare Pages project config.
   "name": "sdsc-website",
   "compatibility_date": "2026-07-02",
   "pages_build_output_dir": "./build"
