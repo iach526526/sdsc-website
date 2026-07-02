@@ -1,4 +1,9 @@
 # Website
+## 關於
+> 目前專案還在施工中，看到一些模版填充是正常的，什麼時候會做完？也許 2026 8 月
+
+
+![打造未來的中興](./static/img/build-future.webp)
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
@@ -39,3 +44,4 @@ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
