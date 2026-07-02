@@ -7,7 +7,7 @@ import styles from './index.module.css';
 
 const siteTitle = '中興大學興大二村';
 const siteDescription =
-  '國立中興大學興大二村住宿生入口，整理國光路329號宿舍生活圈、宿舍網路指南、住宿規章與 AI skill 法規查詢資源。';
+  '國立中興大學興大二村網站，你需要的住宿資訊都在這裡';
 const siteUrl = 'https://nchusdsc.org';
 const socialImage = `${siteUrl}/img/build-future.webp`;
 
