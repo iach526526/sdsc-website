@@ -1,7 +1,15 @@
 import clsx from 'clsx';
+import Head from '@docusaurus/Head';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
+
+const siteTitle = '中興大學興大二村';
+const siteDescription =
+  '國立中興大學興大二村住宿生入口，整理國光路329號宿舍生活圈、宿舍網路指南、住宿規章與 AI skill 法規查詢資源。';
+const siteUrl = 'https://nchusdsc.org';
+const socialImage = `${siteUrl}/img/build-future.webp`;
 
 const features = [
   {
@@ -59,9 +67,11 @@ function TitleText({children}) {
 }
 
 function FeatureImage({src, alt}) {
+  const imageUrl = useBaseUrl(src || '/img/build-future.webp');
+
   return (
     <figure className={styles.featureImage}>
-      <img src={src} alt={alt} loading="lazy" />
+      {src && <img src={imageUrl} alt={alt} loading="lazy" />}
       <div className={clsx(styles.corner, styles.topLeft)} />
       <div className={clsx(styles.corner, styles.topRight)} />
       <div className={clsx(styles.corner, styles.bottomLeft)} />
@@ -92,10 +102,48 @@ function FeatureCard({feature}) {
 }
 
 export default function Home() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: siteTitle,
+    alternateName: ['興大二村', 'NCHU Second Village Dormitory', 'SDSC'],
+    description: siteDescription,
+    url: siteUrl,
+    image: socialImage,
+    inLanguage: 'zh-Hant-TW',
+    about: [
+      '國立中興大學學生宿舍',
+      '興大二村宿舍網路指南',
+      '興大二村公約及違規處理要點',
+      '中興大學宿舍法規 AI skill',
+    ],
+    audience: {
+      '@type': 'Audience',
+      audienceType: '國立中興大學興大二村住宿生',
+    },
+  };
+
   return (
     <Layout
-      title="興大二村"
-      description="中興大學興大二村，國光329興大核心生活圈字卡式主視覺。">
+      title={siteTitle}
+      description={siteDescription}>
+      <Head>
+        <meta
+          name="keywords"
+          content="中興大學興大二村,興大二村,國立中興大學宿舍,興大宿舍,NCHU Second Village,宿舍網路,宿舍規章,國光路329號"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={siteTitle} />
+        <meta property="og:description" content={siteDescription} />
+        <meta property="og:image" content={socialImage} />
+        <meta property="og:image:alt" content="打造未來的中興" />
+        <meta name="twitter:title" content={siteTitle} />
+        <meta name="twitter:description" content={siteDescription} />
+        <meta name="twitter:image" content={socialImage} />
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      </Head>
       <main className={styles.page}>
         <header className={styles.topHero}>
           <nav className={styles.heroNav} aria-label="首頁主視覺">

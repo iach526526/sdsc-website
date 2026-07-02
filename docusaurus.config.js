@@ -12,6 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: '中興大學興大二村',
   tagline: '國光329｜興大核心生活圈',
+  titleDelimiter: '|',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -20,14 +21,14 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://nchusdsc.org',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'nchu',
+  organizationName: 'iach526526',
   projectName: 'sdsc-website',
 
   onBrokenLinks: 'throw',
@@ -73,8 +74,30 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/build-future.webp',
+      metadata: [
+        {
+          name: 'keywords',
+          content:
+            '中興大學興大二村, 興大二村, 國立中興大學宿舍, NCHU dormitory, NCHU Second Village, 興大宿舍, 宿舍網路, 宿舍規章, 國光路329號',
+        },
+        {
+          name: 'author',
+          content: '國立中興大學興大二村西棟網管',
+        },
+        {
+          name: 'robots',
+          content: 'index,follow,max-image-preview:large',
+        },
+        {
+          property: 'og:locale',
+          content: 'zh_TW',
+        },
+        {
+          name: 'twitter:card',
+          content: 'summary_large_image',
+        },
+      ],
       colorMode: {
         respectPrefersColorScheme: true,
       },
