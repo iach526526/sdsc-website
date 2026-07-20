@@ -102,10 +102,10 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: '興大二村',
         logo: {
           alt: '中興大學興大二村 Logo',
-          src: 'img/logo.svg',
+          src: 'img/sdsc-logo-lightmode.png',
+          srcDark: 'img/sdsc-logo-darkmode.png',
         },
         items: [
           {
